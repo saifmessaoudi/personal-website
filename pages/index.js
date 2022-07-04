@@ -101,7 +101,7 @@ const Home = () => (
        
       </Section>
       <section delay={0.2}>
-      <SimpleGrid columns={{md: 13,  sm:10}} gap={{sm:3  ,md:3}}  >
+      <SimpleGrid columns={{lg: 13,  sm:8}} gap={{sm:2  ,md:2 }}  >
  <GridItem><JsIcon></JsIcon></GridItem>
  <GridItem><TsIcon></TsIcon></GridItem>
  <GridItem><TailwindIcon/></GridItem>
