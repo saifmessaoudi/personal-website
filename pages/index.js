@@ -87,7 +87,7 @@ const Home = () => (
         </Heading>
         <Paragraph>
          <p>
-         i'm a 22 years old developer and designer from Tunisia.
+         i&apos;m a 22 years old developer and designer from Tunisia.
          I am interested in software development, architecture, computer networking, and graphic design.
          I enjoy each process of building the application, from conception to deployment.
          
