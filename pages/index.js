@@ -144,7 +144,7 @@ const Home = () => (
           On the web
         </Heading>
         <p>Build process ...</p>
-        <p>I am most responsive through emails. you can reach me by emailing <u>contact@saimessaoudi.com</u></p>
+        <p>Hey i&apos;am most responsive through emails. you can reach me by emailing <u>contact@saimessaoudi.com</u></p>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           
