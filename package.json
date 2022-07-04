@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write .",
-    "lint": "next lint",
-    "postinstall": "cp -R ./node_modules/pspdfkit/dist/pspdfkit-lib ./public"
+    "lint": "next lint"
+    
   },
   "keywords": [],
   "author": "Takuya Matsuyama",
