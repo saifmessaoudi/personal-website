@@ -101,9 +101,10 @@ const Home = () => (
        
       </Section>
       <section delay={0.2}>
-      <Grid templateColumns='repeat(13,30px)' gap={2}>
+      <SimpleGrid columns={{lg: 13,  sm:9}} gap={{sm:4,lg:2}}  >
  <GridItem><JsIcon></JsIcon></GridItem>
  <GridItem><TsIcon></TsIcon></GridItem>
+ <GridItem><TailwindIcon/></GridItem>
  <GridItem><NextjsIcon></NextjsIcon></GridItem>
  <GridItem><ReactIcon></ReactIcon></GridItem>
  
@@ -116,8 +117,8 @@ const Home = () => (
  <GridItem><AdobexdIcon/></GridItem>
  <GridItem><AdobePsIcon/></GridItem>
  <GridItem><AdobeAiIcon/></GridItem>
- <GridItem><TailwindIcon/></GridItem>
-</Grid>
+ 
+</SimpleGrid>
 
       </section>
       
