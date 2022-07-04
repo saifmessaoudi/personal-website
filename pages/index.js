@@ -1,3 +1,4 @@
+import { Grid, GridItem } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import {
 
@@ -11,11 +12,13 @@ import {
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon , ArrowDownIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import { extendTheme } from '@chakra-ui/react'
+import { AdobeAiIcon, AdobePsIcon, AdobexdIcon, CssIcon, FigmaIcon, FirebaseIcon, HtmlIcon, JavaIcon, JsIcon, MysqlIcon, NextjsIcon, PostgresIcon, ReactIcon, TailwindIcon, TsIcon, TunisiaIcon } from '../components/DevIcons'
 
 
 
@@ -24,27 +27,52 @@ import Image from 'next/image'
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
+const theme = extendTheme({
+  textStyles: {
+    h1: {
+      // you can also use responsive styles
+      fontSize: ['48px', '72px'],
+      fontWeight: 'bold',
+      lineHeight: '110%',
+      letterSpacing: '-2%',
+    },
+    h2: {
+      fontSize: ['36px', '48px'],
+      fontWeight: 'semibold',
+      lineHeight: '110%',
+      letterSpacing: '-1%',
+    },
+    
+  },
+})
+
 
 const Home = () => (
   <Layout>
     <Container>
+   
       <Box
         borderRadius="lg"
         mb={6}
         p={3}
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
+        css={{ backdropFilter: 'blur(20px)' }}
       >
-        Hello, I&apos;m an IT graduated student based in Tunisia!
+        <p>Hello, I&apos;m an IT graduated student based in Tunisia </p>
       </Box>
+    
+        
+     
+      
+      
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
+          <Heading as="h2"  variant="page-title">
             Saif Messaoudi
           </Heading>
-          <p>Junior Developer & Graphic Designer</p>
+          <p>Junior Developer & Graphic Designer </p>
         </Box>
         <Box
           flexShrink={0}
@@ -66,8 +94,8 @@ const Home = () => (
               src="/images/pic.jpg"
               alt="Profile image"
               borderRadius="full"
-              width="140%"
-              height="140%"
+              width="200%"
+              height="200%"
             />
           </Box>
         </Box>
@@ -78,16 +106,48 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Build process ...
+         <p>
+         i'm a 22 years old developer and designer from Tunisia.
+         I am interested in software development, architecture, computer networking, and graphic design.
+         I enjoy each process of building the application, from conception to deployment.
+         
+       
+       
+         </p>
         </Paragraph>
-        <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
+
+
+       
+        {/*<Box align="center" my={4}>
+          <a href='cv.pdf' download  target="_blank">
+          <Button  rightIcon={<ArrowDownIcon />} colorScheme="blue">
+              Downlaod CV
             </Button>
-          </NextLink>
-        </Box>
+          </a>
+            
+</Box>*/}
       </Section>
+      <section delay={0.2}>
+      <Grid templateColumns='repeat(13,30px)' gap={2}>
+ <GridItem><JsIcon></JsIcon></GridItem>
+ <GridItem><TsIcon></TsIcon></GridItem>
+ <GridItem><NextjsIcon></NextjsIcon></GridItem>
+ <GridItem><ReactIcon></ReactIcon></GridItem>
+ 
+ 
+ <GridItem><JavaIcon/></GridItem>
+ <GridItem><MysqlIcon/></GridItem>
+ <GridItem><PostgresIcon/></GridItem>
+ <GridItem><FirebaseIcon/></GridItem>
+ <GridItem><FigmaIcon/></GridItem>
+ <GridItem><AdobexdIcon/></GridItem>
+ <GridItem><AdobePsIcon/></GridItem>
+ <GridItem><AdobeAiIcon/></GridItem>
+ <GridItem><TailwindIcon/></GridItem>
+</Grid>
+
+      </section>
+      
 
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
@@ -111,6 +171,7 @@ const Home = () => (
           On the web
         </Heading>
         <p>Build process ...</p>
+        <p>I am most responsive through emails. you can reach me by emailing <u>contact@saimessaoudi.com</u></p>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           

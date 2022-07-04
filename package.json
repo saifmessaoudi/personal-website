@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write .",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "cp -R ./node_modules/pspdfkit/dist/pspdfkit-lib ./public"
   },
   "keywords": [],
   "author": "Takuya Matsuyama",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-next": "^12.1.5",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.1.4"
   }
 }
