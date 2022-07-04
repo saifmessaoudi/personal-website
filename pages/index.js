@@ -15,7 +15,7 @@ import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 
-import { AdobeAiIcon, AdobePsIcon, AdobexdIcon, FigmaIcon, FirebaseIcon, JavaIcon, JsIcon, MysqlIcon, NextjsIcon, PostgresIcon, ReactIcon, TailwindIcon, TsIcon } from '../components/DevIcons'
+import { AdobeAiIcon, AdobePsIcon, AdobexdIcon, FigmaIcon, FirebaseIcon, JavaIcon, JsIcon, MysqlIcon, NextjsIcon, ReactIcon, TailwindIcon, TsIcon } from '../components/DevIcons'
 
 
 
@@ -101,7 +101,7 @@ const Home = () => (
        
       </Section>
       <section delay={0.2}>
-      <SimpleGrid columns={{md: 13,  sm:9}} gap={{sm:5  ,md:2}}  >
+      <SimpleGrid columns={{md: 13,  sm:10}} gap={{sm:3  ,md:3}}  >
  <GridItem><JsIcon></JsIcon></GridItem>
  <GridItem><TsIcon></TsIcon></GridItem>
  <GridItem><TailwindIcon/></GridItem>
@@ -111,7 +111,7 @@ const Home = () => (
  
  <GridItem><JavaIcon/></GridItem>
  <GridItem><MysqlIcon/></GridItem>
- <GridItem><PostgresIcon/></GridItem>
+ 
  <GridItem><FirebaseIcon/></GridItem>
  <GridItem><FigmaIcon/></GridItem>
  <GridItem><AdobexdIcon/></GridItem>
