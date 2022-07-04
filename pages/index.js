@@ -1,24 +1,21 @@
 import { Grid, GridItem } from '@chakra-ui/react'
-import NextLink from 'next/link'
+
 import {
 
   Container,
   Heading,
   Box,
   SimpleGrid,
-  Button,
-  
- 
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
-import { ChevronRightIcon , ArrowDownIcon } from '@chakra-ui/icons'
+
 import Paragraph from '../components/paragraph'
 
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { extendTheme } from '@chakra-ui/react'
-import { AdobeAiIcon, AdobePsIcon, AdobexdIcon, CssIcon, FigmaIcon, FirebaseIcon, HtmlIcon, JavaIcon, JsIcon, MysqlIcon, NextjsIcon, PostgresIcon, ReactIcon, TailwindIcon, TsIcon, TunisiaIcon } from '../components/DevIcons'
+
+import { AdobeAiIcon, AdobePsIcon, AdobexdIcon, FigmaIcon, FirebaseIcon, JavaIcon, JsIcon, MysqlIcon, NextjsIcon, PostgresIcon, ReactIcon, TailwindIcon, TsIcon } from '../components/DevIcons'
 
 
 
@@ -27,24 +24,7 @@ import Image from 'next/image'
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
 })
-const theme = extendTheme({
-  textStyles: {
-    h1: {
-      // you can also use responsive styles
-      fontSize: ['48px', '72px'],
-      fontWeight: 'bold',
-      lineHeight: '110%',
-      letterSpacing: '-2%',
-    },
-    h2: {
-      fontSize: ['36px', '48px'],
-      fontWeight: 'semibold',
-      lineHeight: '110%',
-      letterSpacing: '-1%',
-    },
-    
-  },
-})
+
 
 
 const Home = () => (
@@ -118,14 +98,7 @@ const Home = () => (
 
 
        
-        {/*<Box align="center" my={4}>
-          <a href='cv.pdf' download  target="_blank">
-          <Button  rightIcon={<ArrowDownIcon />} colorScheme="blue">
-              Downlaod CV
-            </Button>
-          </a>
-            
-</Box>*/}
+       
       </Section>
       <section delay={0.2}>
       <Grid templateColumns='repeat(13,30px)' gap={2}>
