@@ -1,4 +1,5 @@
-import {  GridItem } from '@chakra-ui/react'
+import {  GridItem, VStack } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 
 import {
 
@@ -20,6 +21,7 @@ import { AdobeAiIcon, AdobePsIcon, AdobexdIcon, FigmaIcon, FirebaseIcon, JavaIco
 
 
 import Image from 'next/image'
+import { ArrowDownIcon  } from '@chakra-ui/icons'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -91,36 +93,46 @@ const Home = () => (
          I am interested in software development, architecture, computer networking, and graphic design.
          I enjoy each process of building the application, from conception to deployment.
          
+         
        
        
          </p>
+        
         </Paragraph>
-
+       
 
        
        
       </Section>
-      <section delay={0.2}>
-      <SimpleGrid    columns={{ lg:13,base:9}} spacingY='20px' spacingX='25px'  >
- <GridItem><JsIcon></JsIcon></GridItem>
- <GridItem><TsIcon></TsIcon></GridItem>
- <GridItem><TailwindIcon/></GridItem>
- <GridItem><NextjsIcon></NextjsIcon></GridItem>
- <GridItem><ReactIcon></ReactIcon></GridItem>
- 
- 
- <GridItem><JavaIcon/></GridItem>
- <GridItem><MysqlIcon/></GridItem>
- 
- <GridItem><FirebaseIcon/></GridItem>
- <GridItem><FigmaIcon/></GridItem>
- <GridItem><AdobexdIcon/></GridItem>
- <GridItem><AdobePsIcon/></GridItem>
- <GridItem><AdobeAiIcon/></GridItem>
- 
+
+      <VStack spacing={6}>
+
+      <a href='cv.pdf'><Button colorScheme='currentcolor'  rightIcon={<ArrowDownIcon></ArrowDownIcon>} variant='outline'><h1>Download CV</h1></Button></a>  
+    
+  
+    <section delay={0.2}>
+    <SimpleGrid    columns={{ lg:13,base:9}} spacingY='20px' spacingX='25px'  >
+<GridItem><JsIcon></JsIcon></GridItem>
+<GridItem><TsIcon></TsIcon></GridItem>
+<GridItem><TailwindIcon/></GridItem>
+<GridItem><NextjsIcon></NextjsIcon></GridItem>
+<GridItem><ReactIcon></ReactIcon></GridItem>
+
+
+<GridItem><JavaIcon/></GridItem>
+<GridItem><MysqlIcon/></GridItem>
+
+<GridItem><FirebaseIcon/></GridItem>
+<GridItem><FigmaIcon/></GridItem>
+<GridItem><AdobexdIcon/></GridItem>
+<GridItem><AdobePsIcon/></GridItem>
+<GridItem><AdobeAiIcon/></GridItem>
+
 </SimpleGrid>
 
-      </section>
+    </section>
+      </VStack>
+    
       
 
       <Section delay={0.2}>
